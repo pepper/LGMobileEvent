@@ -95,10 +95,10 @@ $(document).ready(function(){
 	});
 
 	$(".SubmitPhoto").click(function(event){
-		if(typeof window.FileReader !== "function"){
-			alert("抱歉，您使用的瀏覽器不支援圖片合成功能，請使用其他瀏覽器再試試看，謝謝！");
-			return;
-		}
+		// if(typeof window.FileReader !== "function"){
+		// 	alert("抱歉，您使用的瀏覽器不支援圖片合成功能，請使用其他瀏覽器再試試看，謝謝！1");
+		// 	return;
+		// }
 		var fileInput = $(".FileInput")[0];
 		var fileReader;
 		var imageFile;
@@ -107,7 +107,7 @@ $(document).ready(function(){
 			alert("抱歉，好像有哪些地方出錯了，請重新整理再試一次，謝謝！");
 		}
 		else if(!fileInput.files){
-			alert("抱歉，您使用的瀏覽器不支援圖片合成功能，請使用其他瀏覽器再試試看，謝謝！");
+			alert("抱歉，您使用的瀏覽器不支援圖片合成功能，請使用其他瀏覽器再試試看，謝謝！2");
 		}
 		else if(!fileInput.files[0]){
 			alert("請先選擇圖片再繼續下去，謝謝！");
