@@ -1,0 +1,464 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.MainContainer {
+  position: relative;
+  top: 0px;
+  left: 50%;
+  margin-left: -360px;
+  width: 720px;
+  height: 1306px;
+  background: url('../images/Background.png?1405421272') no-repeat;
+}
+.MainContainer .AskLikeContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: #131313 url('../images/AskLike.png?1405604860') center top no-repeat;
+  cursor: pointer;
+}
+.MainContainer .AskLikeContainer.Hide {
+  display: none;
+}
+.MainContainer .EventPanelContainer {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  top: 400px;
+  height: 906px;
+}
+.MainContainer .EventPanelContainer .Background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.MainContainer .EventPanelContainer .EventPanel {
+  position: relative;
+  height: 522px;
+  width: 100%;
+  background: url('../images/EventPanel.png?1405603102') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer {
+  position: absolute;
+  top: 62px;
+  left: 36px;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton1 {
+  width: 130px;
+  height: 47px;
+  background: url('../images/EventButton1.png?1405487954') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton1.Active {
+  background: url('../images/EventButton1Active.png?1405488048') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton1:hover {
+  background: url('../images/EventButton1Active.png?1405488048') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton2 {
+  width: 130px;
+  height: 47px;
+  margin-top: 43px;
+  background: url('../images/EventButton2.png?1405488048') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton2.Active {
+  background: url('../images/EventButton2Active.png?1405487954') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton2:hover {
+  background: url('../images/EventButton2Active.png?1405487954') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton3 {
+  width: 130px;
+  height: 47px;
+  margin-top: 43px;
+  background: url('../images/EventButton3.png?1405488048') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton3.Active {
+  background: url('../images/EventButton3Active.png?1405487954') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .ButtonContainer .EventButton3:hover {
+  background: url('../images/EventButton3Active.png?1405487954') no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .TermsContainer {
+  position: absolute;
+  top: 30px;
+  left: 175px;
+  width: 530px;
+  height: 462px;
+  background: url('../images/TermsContainer.png?1405593682') no-repeat;
+  text-align: center;
+  overflow: scroll;
+}
+.MainContainer .EventPanelContainer .EventPanel .TermsContainer.Hide {
+  display: none;
+}
+.MainContainer .EventPanelContainer .EventPanel .AwardContainer {
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  height: 100%;
+  width: 451px;
+  background: url('../images/Award.png?1405595108') center right no-repeat;
+}
+.MainContainer .EventPanelContainer .EventPanel .AwardContainer.Hide {
+  display: none;
+}
+.MainContainer .EventPanelContainer.Hide {
+  display: none;
+}
+.MainContainer .PhotoActionContainer {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  top: 400px;
+  height: 906px;
+}
+.MainContainer .PhotoActionContainer .Background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.MainContainer .PhotoActionContainer .ChoosePhotoPanel {
+  position: relative;
+  height: 522px;
+  width: 100%;
+  background: url('../images/ChoosePhotoBackground.png?1405593494') no-repeat;
+}
+.MainContainer .PhotoActionContainer .ChoosePhotoPanel .CellphoneLogo {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 295px;
+  height: 319px;
+  background: url('../images/ChoosePhotoCellphone.png?1405593796') no-repeat;
+}
+.MainContainer .PhotoActionContainer .ChoosePhotoPanel .ControlContainer {
+  position: absolute;
+  top: 100px;
+  left: 415px;
+}
+.MainContainer .PhotoActionContainer .ChoosePhotoPanel .FileInput {
+  display: none;
+}
+.MainContainer .PhotoActionContainer .ChoosePhotoPanel .SubmitPhoto {
+  display: inline-block;
+  margin-right: 25px;
+  margin-top: 110px;
+}
+.MainContainer .PhotoActionContainer .ChoosePhotoPanel.Hide {
+  display: none;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel {
+  position: relative;
+  height: 522px;
+  width: 100%;
+  background: url('../images/ChoosePhotoBackground.png?1405593494') no-repeat;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .ControlContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .ControlContainer .MoveUp {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -14.5px;
+  height: 42px;
+  width: 29px;
+  background: url('../images/MoveUp.png?1405490288') no-repeat;
+  cursor: pointer;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .ControlContainer .MoveDown {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -14.5px;
+  height: 42px;
+  width: 29px;
+  background: url('../images/MoveDown.png?1405490288') no-repeat;
+  cursor: pointer;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .ControlContainer .MoveLeft {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  margin-top: -14.5px;
+  height: 29px;
+  width: 42px;
+  background: url('../images/MoveLeft.png?1405490288') no-repeat;
+  cursor: pointer;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .ControlContainer .MoveRight {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  margin-top: -14.5px;
+  height: 29px;
+  width: 42px;
+  background: url('../images/MoveRight.png?1405515064') no-repeat;
+  cursor: pointer;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .ControlContainer .ZoomIn {
+  position: absolute;
+  left: 630px;
+  top: 40px;
+  height: 42px;
+  width: 42px;
+  background: url('../images/ZoomIn.png?1405490288') no-repeat;
+  cursor: pointer;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .ControlContainer .ZoomOut {
+  position: absolute;
+  left: 630px;
+  top: 100px;
+  height: 42px;
+  width: 42px;
+  background: url('../images/ZoomOut.png?1405490502') no-repeat;
+  cursor: pointer;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .ControlContainer .Confirm {
+  position: absolute;
+  left: 630px;
+  top: 450px;
+  height: 36px;
+  width: 46px;
+  background: url('../images/Confirm.png?1405490290') no-repeat;
+  cursor: pointer;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .CanvasContainer {
+  position: absolute;
+  width: 446px;
+  height: 351px;
+  top: 50%;
+  margin-top: -175.5px;
+  left: 50%;
+  margin-left: -223px;
+  background: url('../images/CanvasBackground.png?1405602828') no-repeat;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel .CanvasContainer canvas {
+  position: absolute;
+  width: 427px;
+  height: 332px;
+  top: 50%;
+  margin-top: -166px;
+  left: 50%;
+  margin-left: -213.5px;
+}
+.MainContainer .PhotoActionContainer .EditPhotoPanel.Hide {
+  display: none;
+}
+.MainContainer .PhotoActionContainer .UploadingPhotoPanel {
+  position: relative;
+  height: 522px;
+  width: 100%;
+  background: url('../images/ChoosePhotoBackground.png?1405593494') no-repeat;
+  text-align: center;
+}
+.MainContainer .PhotoActionContainer .UploadingPhotoPanel .Uploading {
+  position: relative;
+  top: 100px;
+}
+.MainContainer .PhotoActionContainer .UploadingPhotoPanel.Hide {
+  display: none;
+}
+.MainContainer .PhotoActionContainer .ShareToFacebookPanel {
+  position: relative;
+  height: 522px;
+  width: 100%;
+  background: url('../images/ChoosePhotoBackground.png?1405593494') no-repeat;
+}
+.MainContainer .PhotoActionContainer .ShareToFacebookPanel .ShareToFacebookDescription {
+  position: relative;
+  width: 634px;
+  height: 58px;
+  top: 50px;
+  left: 50%;
+  margin-left: -317px;
+  background: url('../images/ShareToFacebook.png?1405602810') no-repeat;
+}
+.MainContainer .PhotoActionContainer .ShareToFacebookPanel .ShareButton {
+  position: relative;
+  width: 60px;
+  height: 47px;
+  top: 100px;
+  left: 50%;
+  margin-left: -30px;
+  background: url('../images/ShareButton.png?1405602812') no-repeat;
+}
+.MainContainer .PhotoActionContainer .ShareToFacebookPanel.Hide {
+  display: none;
+}
+.MainContainer .PhotoActionContainer.Hide {
+  display: none;
+}
+
+.HeadImageContainer {
+  position: relative;
+  top: 15px;
+  left: 50%;
+  margin-left: -324px;
+  width: 648px;
+  height: 311px;
+  background: url('../images/HeadImage.png?1405420454') no-repeat;
+}
+
+.PromotionContainer {
+  position: relative;
+  margin-top: 27px;
+  left: 50%;
+  margin-left: -323.5px;
+  width: 647px;
+  height: 690px;
+}
+.PromotionContainer .ButtonContainer {
+  height: 62px;
+  width: 100%;
+}
+.PromotionContainer .ButtonContainer .PromotionButton1 {
+  display: inline-block;
+  width: 283px;
+  height: 62px;
+  background: url('../images/PromotionButton1.png?1405593010') no-repeat;
+  cursor: pointer;
+}
+.PromotionContainer .ButtonContainer .PromotionButton1.Active {
+  background: url('../images/PromotionButton1Active.png?1405592882') no-repeat;
+}
+.PromotionContainer .ButtonContainer .PromotionButton1:hover {
+  background: url('../images/PromotionButton1Active.png?1405592882') no-repeat;
+}
+.PromotionContainer .ButtonContainer .PromotionButton2 {
+  display: inline-block;
+  margin-left: 6px;
+  width: 175px;
+  height: 62px;
+  background: url('../images/PromotionButton2.png?1405592882') no-repeat;
+  cursor: pointer;
+}
+.PromotionContainer .ButtonContainer .PromotionButton2.Active {
+  background: url('../images/PromotionButton2Active.png?1405593010') no-repeat;
+}
+.PromotionContainer .ButtonContainer .PromotionButton2:hover {
+  background: url('../images/PromotionButton2Active.png?1405593010') no-repeat;
+}
+.PromotionContainer .ButtonContainer .PromotionButton3 {
+  display: inline-block;
+  margin-left: 7px;
+  width: 176px;
+  height: 62px;
+  background: url('../images/PromotionButton3.png?1405592882') no-repeat;
+  cursor: pointer;
+}
+.PromotionContainer .PromotionContentContainer {
+  position: relative;
+  height: 518px;
+  width: 100%;
+  background: url('../images/PromotionBackground.png?1405662599') no-repeat;
+}
+.PromotionContainer .PromotionContentContainer .MovieContent {
+  width: 100%;
+}
+.PromotionContainer .PromotionContentContainer .MovieContent .Description {
+  position: relative;
+  display: inline-block;
+  top: 18px;
+  margin-left: 20px;
+  width: 460px;
+  height: 88px;
+  background: url('../images/MovieDescription.png?1405594046') no-repeat;
+}
+.PromotionContainer .PromotionContentContainer .MovieContent .CameraButton {
+  position: relative;
+  top: 20px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+.PromotionContainer .PromotionContentContainer .MovieContent .MoviePlayer {
+  position: relative;
+  top: 30px;
+  left: 50%;
+  margin-left: -307px;
+}
+.PromotionContainer .FooterDescription {
+  width: 100%;
+  height: 110px;
+  background: url('../images/FooterDescription.png?1405592884') no-repeat;
+}
+
+.SeparatorText {
+  position: relative;
+  margin-top: 30px;
+  left: 50%;
+  width: 649px;
+  height: 19px;
+  margin-left: -324.5px;
+  background: url('../images/Separator.png?1405341462') no-repeat;
+}
+
+.ImageContainer {
+  position: relative;
+  margin-top: 30px;
+  left: 50%;
+  width: 645px;
+  height: 166px;
+  margin-left: -322.5px;
+  background: url('../images/ImageContainer.png?1405592884') no-repeat;
+}
+.ImageContainer .ImageListBox {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  margin-left: -239px;
+  width: 478px;
+  height: 120px;
+  overflow: hidden;
+}
+.ImageContainer .ImageListBox .ImageList {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  white-space: nowrap;
+}
+.ImageContainer .ImageListBox .ImageList img {
+  width: 150px;
+  height: 120px;
+  margin-right: 14px;
+}
+.ImageContainer .PreviousPage {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin-top: -6.5px;
+  width: 11px;
+  height: 13px;
+  cursor: pointer;
+  background: url('../images/PreviousPage.png?1405421036') no-repeat;
+}
+.ImageContainer .NextPage {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -6.5px;
+  width: 11px;
+  height: 13px;
+  cursor: pointer;
+  background: url('../images/NextPage.png?1405421040') no-repeat;
+}

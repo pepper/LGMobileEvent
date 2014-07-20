@@ -1,0 +1,507 @@
+@import "compass/css3";
+
+$FontFamily: 	"Lucida Grande", Helvetica, Arial, sans-serif;
+
+html, body{
+	margin:		0px;
+	padding:	0px;
+	font:		12px $FontFamily;
+}
+
+.MainContainer{
+	$BackgroundPath:	"Background.png";
+	position:			relative;
+	top:				0px;
+	left:				50%;
+	margin-left:		-1 * image-width($BackgroundPath) / 2;
+	width:				image-width($BackgroundPath);
+	height:				image-height($BackgroundPath);
+	background:			image-url($BackgroundPath) no-repeat;
+	.AskLikeContainer{
+		position:			absolute;
+		top:				0px;
+		left:				0px;
+		z-index:			100;
+		width:				100%;
+		height:				100%;
+		background:			#131313 image-url("AskLike.png") center top no-repeat;
+		cursor:				pointer;
+		&.Hide{
+			display:		none;
+		}
+	}
+	.EventPanelContainer{
+		$TopOffset:					400px;
+		position:					absolute;
+		z-index:					50;
+		width:						100%;
+		top:						$TopOffset;
+		height:						image-height($BackgroundPath) - $TopOffset;
+		.Background{
+			position:				absolute;
+			top:					0px;
+			left:					0px;
+			width:					100%;
+			height:					100%;
+			background:				#000000;
+			@include opacity(0.7);
+		}
+		.EventPanel{
+			$EventPanelBackgroundPath:	"EventPanel.png";
+			position:					relative;
+			height:						image-height($EventPanelBackgroundPath);
+			width:						100%;
+			background:					image-url($EventPanelBackgroundPath) no-repeat;
+			.ButtonContainer{
+				position:				absolute;
+				top:					62px;
+				left:					36px;
+				.EventButton1{
+					$ButtonBackgroundPath:			"EventButton1.png";
+					$ButtonActiveBackgroundPath:	"EventButton1Active.png";
+					width:							image-width($ButtonBackgroundPath);
+					height:							image-height($ButtonBackgroundPath);
+					background:						image-url($ButtonBackgroundPath) no-repeat;
+					&.Active{
+						background:					image-url($ButtonActiveBackgroundPath) no-repeat;
+					}
+					&:hover{
+						background:					image-url($ButtonActiveBackgroundPath) no-repeat;
+					}
+				}
+				.EventButton2{
+					$ButtonBackgroundPath:			"EventButton2.png";
+					$ButtonActiveBackgroundPath:	"EventButton2Active.png";
+					width:							image-width($ButtonBackgroundPath);
+					height:							image-height($ButtonBackgroundPath);
+					margin-top:						43px;
+					background:						image-url($ButtonBackgroundPath) no-repeat;
+					&.Active{
+						background:					image-url($ButtonActiveBackgroundPath) no-repeat;
+					}
+					&:hover{
+						background:					image-url($ButtonActiveBackgroundPath) no-repeat;
+					}
+				}
+				.EventButton3{
+					$ButtonBackgroundPath:			"EventButton3.png";
+					$ButtonActiveBackgroundPath:	"EventButton3Active.png";
+					width:							image-width($ButtonBackgroundPath);
+					height:							image-height($ButtonBackgroundPath);
+					margin-top:						43px;
+					background:						image-url($ButtonBackgroundPath) no-repeat;
+					&.Active{
+						background:					image-url($ButtonActiveBackgroundPath) no-repeat;
+					}
+					&:hover{
+						background:					image-url($ButtonActiveBackgroundPath) no-repeat;
+					}
+				}
+			}
+			.TermsContainer{
+				$TermsBackgroundPath:	"TermsContainer.png";
+				position:				absolute;
+				top:					30px;
+				left:					175px;
+				width:					image-width($TermsBackgroundPath);
+				height:					image-height($TermsBackgroundPath);
+				background:				image-url($TermsBackgroundPath) no-repeat;
+				text-align:				center;
+				overflow:				scroll;
+				&.Hide{
+					display:			none;
+				}
+			}
+			.AwardContainer{
+				$AwardPath:				"Award.png";
+				position:				absolute;
+				top:					0px;
+				right:					50px;
+				height:					100%;
+				width:					image-width($AwardPath);
+				background:				image-url($AwardPath) center right no-repeat;
+				&.Hide{
+					display:			none;
+				}
+			}
+		}
+		&.Hide{
+			display:			none;
+		}
+	}
+	.PhotoActionContainer{
+		$TopOffset:					400px;
+		position:					absolute;
+		z-index:					50;
+		width:						100%;
+		top:						$TopOffset;
+		height:						image-height($BackgroundPath) - $TopOffset;
+		.Background{
+			position:				absolute;
+			top:					0px;
+			left:					0px;
+			width:					100%;
+			height:					100%;
+			background:				#000000;
+			@include opacity(0.7);
+		}
+		.ChoosePhotoPanel{
+			$ChoosePhotoBackgroundPath:	"ChoosePhotoBackground.png";
+			position:					relative;
+			height:						image-height($ChoosePhotoBackgroundPath);
+			width:						100%;
+			background:					image-url($ChoosePhotoBackgroundPath) no-repeat;
+			.CellphoneLogo{
+				$CellphoneLogoPath:		"ChoosePhotoCellphone.png";
+				position:				absolute;
+				bottom:					30px;
+				left:					30px;
+				width:					image-width($CellphoneLogoPath);
+				height:					image-height($CellphoneLogoPath);
+				background:				image-url($CellphoneLogoPath) no-repeat;
+			}
+			.ControlContainer{
+				position:				absolute;
+				top:					100px;
+				left:					415px;
+			}
+			.FileInput{
+				display:				none;
+			}
+			.SubmitPhoto{
+				display:				inline-block;
+				margin-right:			25px;
+				margin-top:				110px;
+			}
+			&.Hide{
+				display:				none;
+			}
+		}
+		.EditPhotoPanel{
+			$ChoosePhotoBackgroundPath:	"ChoosePhotoBackground.png";
+			position:					relative;
+			height:						image-height($ChoosePhotoBackgroundPath);
+			width:						100%;
+			background:					image-url($ChoosePhotoBackgroundPath) no-repeat;
+			.ControlContainer{
+				position:				absolute;
+				width:					100%;
+				height:					100%;
+				top:					0px;
+				left:					0px;
+				.MoveUp{
+					$ControlBackground:	"MoveUp.png";
+					position:			absolute;
+					top:				20px;
+					left:				50%;
+					margin-left:		-1 * image-width($ControlBackground) / 2;
+					height:				image-height($ControlBackground);
+					width:				image-width($ControlBackground);
+					background:			image-url($ControlBackground) no-repeat;
+					cursor:				pointer;
+				}
+				.MoveDown{
+					$ControlBackground:	"MoveDown.png";
+					position:			absolute;
+					bottom:				20px;
+					left:				50%;
+					margin-left:		-1 * image-width($ControlBackground) / 2;
+					height:				image-height($ControlBackground);
+					width:				image-width($ControlBackground);
+					background:			image-url($ControlBackground) no-repeat;
+					cursor:				pointer;
+				}
+				.MoveLeft{
+					$ControlBackground:	"MoveLeft.png";
+					position:			absolute;
+					left:				60px;
+					top:				50%;
+					margin-top:			-1 * image-height($ControlBackground) / 2;
+					height:				image-height($ControlBackground);
+					width:				image-width($ControlBackground);
+					background:			image-url($ControlBackground) no-repeat;
+					cursor:				pointer;
+				}
+				.MoveRight{
+					$ControlBackground:	"MoveRight.png";
+					position:			absolute;
+					right:				60px;
+					top:				50%;
+					margin-top:			-1 * image-height($ControlBackground) / 2;
+					height:				image-height($ControlBackground);
+					width:				image-width($ControlBackground);
+					background:			image-url($ControlBackground) no-repeat;
+					cursor:				pointer;
+				}
+				.ZoomIn{
+					$ControlBackground:	"ZoomIn.png";
+					position:			absolute;
+					left:				630px;
+					top:				40px;
+					height:				image-height($ControlBackground);
+					width:				image-width($ControlBackground);
+					background:			image-url($ControlBackground) no-repeat;
+					cursor:				pointer;
+				}
+				.ZoomOut{
+					$ControlBackground:	"ZoomOut.png";
+					position:			absolute;
+					left:				630px;
+					top:				100px;
+					height:				image-height($ControlBackground);
+					width:				image-width($ControlBackground);
+					background:			image-url($ControlBackground) no-repeat;
+					cursor:				pointer;
+				}
+				.Confirm{
+					$ControlBackground:	"Confirm.png";
+					position:			absolute;
+					left:				630px;
+					top:				450px;
+					height:				image-height($ControlBackground);
+					width:				image-width($ControlBackground);
+					background:			image-url($ControlBackground) no-repeat;
+					cursor:				pointer;
+				}
+			}
+			.CanvasContainer{
+				$CanvasBackground:		"CanvasBackground.png";
+				position:				absolute;
+				width:					image-width($CanvasBackground);
+				height:					image-height($CanvasBackground);
+				top:					50%;
+				margin-top:				-1 * image-height($CanvasBackground) / 2;
+				left:					50%;
+				margin-left:			-1 * image-width($CanvasBackground) / 2;
+				background:				image-url($CanvasBackground) no-repeat;
+				canvas{
+					$CanvasFrame:		"CanvasFrame.png";
+					position:			absolute;
+					width:				image-width($CanvasFrame);
+					height:				image-height($CanvasFrame);
+					top:				50%;
+					margin-top:			-1 * image-height($CanvasFrame) / 2;
+					left:				50%;
+					margin-left:		-1 * image-width($CanvasFrame) / 2;
+				}
+			}
+			&.Hide{
+				display:				none;
+			}
+		}
+		.UploadingPhotoPanel{
+			$ChoosePhotoBackgroundPath:	"ChoosePhotoBackground.png";
+			position:					relative;
+			height:						image-height($ChoosePhotoBackgroundPath);
+			width:						100%;
+			background:					image-url($ChoosePhotoBackgroundPath) no-repeat;
+			text-align:					center;
+			.Uploading{
+				position:				relative;
+				top:					100px;
+			}
+			&.Hide{
+				display:				none;
+			}
+		}
+		.ShareToFacebookPanel{
+			$ChoosePhotoBackgroundPath:	"ChoosePhotoBackground.png";
+			position:					relative;
+			height:						image-height($ChoosePhotoBackgroundPath);
+			width:						100%;
+			background:					image-url($ChoosePhotoBackgroundPath) no-repeat;
+			.ShareToFacebookDescription{
+				$DescriptionPath:		"ShareToFacebook.png";
+				position:				relative;
+				width:					image-width($DescriptionPath);
+				height:					image-height($DescriptionPath);
+				top:					50px;
+				left:					50%;
+				margin-left:			-1 * image-width($DescriptionPath) / 2;
+				background:				image-url($DescriptionPath) no-repeat;
+			}
+			.ShareButton{
+				$ShareButtonPath:		"ShareButton.png";
+				position:				relative;
+				width:					image-width($ShareButtonPath);
+				height:					image-height($ShareButtonPath);
+				top:					100px;
+				left:					50%;
+				margin-left:			-1 * image-width($ShareButtonPath) / 2;
+				background:				image-url($ShareButtonPath) no-repeat;
+			}
+			&.Hide{
+				display:				none;
+			}
+		}
+		&.Hide{
+			display:				none;
+		}
+	}
+}
+
+.HeadImageContainer{
+	$BackgroundPath:	"HeadImage.png";
+	position:			relative;
+	top:				15px;
+	left:				50%;
+	margin-left:		-1 * image-width($BackgroundPath) / 2;
+	width:				image-width($BackgroundPath);
+	height:				image-height($BackgroundPath);
+	background:			image-url($BackgroundPath) no-repeat;
+}
+
+.PromotionContainer{
+	$PromotionButton1Path:			"PromotionButton1.png";
+	$PromotionButton1ActivePath:	"PromotionButton1Active.png";
+	$PromotionButton2Path:			"PromotionButton2.png";
+	$PromotionButton2ActivePath:	"PromotionButton2Active.png";
+	$PromotionButton3Path:			"PromotionButton3.png";
+	$PromotionBackground:			"PromotionBackground.png";
+	$FooterDescriptionPath:			"FooterDescription.png";
+	position:						relative;
+	margin-top:						27px;
+	left:							50%;
+	margin-left:					-1 * image-width($PromotionBackground) / 2;
+	width:							image-width($PromotionBackground);
+	height:							image-height($PromotionButton1Path) + image-height($PromotionBackground) + image-height($FooterDescriptionPath);
+	.ButtonContainer{
+		height:						image-height($PromotionButton1Path);
+		width:						100%;
+		.PromotionButton1{
+			display:				inline-block;
+			width:					image-width($PromotionButton1Path);
+			height:					image-height($PromotionButton1Path);
+			background:				image-url($PromotionButton1Path) no-repeat;
+			cursor:					pointer;
+			&.Active{
+				background:			image-url($PromotionButton1ActivePath) no-repeat;
+			}
+			&:hover{
+				background:			image-url($PromotionButton1ActivePath) no-repeat;
+			}
+		}
+		.PromotionButton2{
+			display:				inline-block;
+			margin-left:			6px;
+			width:					image-width($PromotionButton2Path);
+			height:					image-height($PromotionButton2Path);
+			background:				image-url($PromotionButton2Path) no-repeat;
+			cursor:					pointer;
+			&.Active{
+				background:			image-url($PromotionButton2ActivePath) no-repeat;
+			}
+			&:hover{
+				background:			image-url($PromotionButton2ActivePath) no-repeat;
+			}
+		}
+		.PromotionButton3{
+			display:				inline-block;
+			margin-left:			7px;
+			width:					image-width($PromotionButton3Path);
+			height:					image-height($PromotionButton3Path);
+			background:				image-url($PromotionButton3Path) no-repeat;
+			cursor:					pointer;
+		}
+	}
+	.PromotionContentContainer{
+		position:						relative;
+		height:							image-height($PromotionBackground);
+		width:							100%;
+		background:						image-url($PromotionBackground) no-repeat;
+		.MovieContent{
+			width:						100%;
+			.Description{
+				$DescriptionImagePath:	"MovieDescription.png";
+				position:				relative;
+				display:				inline-block;
+				top:					18px;
+				margin-left:			20px;
+				width:					image-width($DescriptionImagePath);
+				height:					image-height($DescriptionImagePath);
+				background:				image-url($DescriptionImagePath) no-repeat;
+			}
+			.CameraButton{
+				position:				relative;
+				top:					20px;
+				margin-left:			40px;
+				cursor:					pointer;
+			}
+			.MoviePlayer{
+				position:				relative;
+				top:					30px;
+				left:					50%;
+				margin-left:			-307px;
+			}
+		}
+	}
+	.FooterDescription{
+		width:							100%;
+		height:							image-height($FooterDescriptionPath);
+		background:						image-url($FooterDescriptionPath) no-repeat;
+	}
+}
+
+.SeparatorText{
+	$BackgroundPath:					"Separator.png";
+	position:							relative;
+	margin-top:							30px;
+	left:								50%;
+	width:								image-width($BackgroundPath);
+	height:								image-height($BackgroundPath);
+	margin-left:						-1 * image-width($BackgroundPath) / 2;
+	background:							image-url($BackgroundPath) no-repeat;
+}
+
+.ImageContainer{
+	$BackgroundPath:					"ImageContainer.png";
+	position:							relative;
+	margin-top:							30px;
+	left:								50%;
+	width:								image-width($BackgroundPath);
+	height:								image-height($BackgroundPath);
+	margin-left:						-1 * image-width($BackgroundPath) / 2;
+	background:							image-url($BackgroundPath) no-repeat;
+	.ImageListBox{
+		position:						absolute;
+		top:							22px;
+		left:							50%;
+		margin-left:					-239px;
+		width:							478px;
+		height:							120px;
+		overflow:						hidden;
+		.ImageList{
+			position:					absolute;
+			top:						0px;
+			left:						0px;
+			white-space:				nowrap;
+			img{
+				width:					150px;
+				height:					120px;
+				margin-right:			14px;
+			}
+		}
+	}
+	.PreviousPage{
+		$PreviousPagePath:				"PreviousPage.png";
+		position:						absolute;
+		top:							50%;
+		left:							10px;
+		margin-top:						-1 * image-height($PreviousPagePath) / 2;
+		width:							image-width($PreviousPagePath);
+		height:							image-height($PreviousPagePath);
+		cursor:							pointer;
+		background:							image-url($PreviousPagePath) no-repeat;
+	}
+	.NextPage{
+		$NextPagePath:					"NextPage.png";
+		position:						absolute;
+		top:							50%;
+		right:							10px;
+		margin-top:						-1 * image-height($NextPagePath) / 2;
+		width:							image-width($NextPagePath);
+		height:							image-height($NextPagePath);
+		cursor:							pointer;
+		background:						image-url($NextPagePath) no-repeat;
+	}
+}
