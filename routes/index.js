@@ -9,7 +9,6 @@ router.get('/', function(req, res) {
 });
 
 router.post("/photo", function(req, res){
-	console.log(req.body);
 	mongo.database.collection("photo", function(err, collection){
 		if(err){
 			return console.log(err);
@@ -22,7 +21,13 @@ router.post("/photo", function(req, res){
 			if(err){
 				return console.log(err);
 			}
-			res.json(data[0]);
+			console.log(data);
+			if(data && data.length > 0){
+				res.json(data[0]);
+			}
+			else{
+				res.json("OK");
+			}
 		});
 	});
 });
